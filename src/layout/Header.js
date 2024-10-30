@@ -37,7 +37,7 @@ function Header() {
             </Link>
             <Link
               to="/"
-              className="px-3 font-semibold uppercase text-5xl text-black"
+              className="px-3 font-semibold uppercase text-3xl text-black"
             >
               J & I
             </Link>
@@ -57,7 +57,7 @@ function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="mx-2 py-1 text-lg leading-6 text-black border-b-2 border-transparent hover:border-black hover:text-black"
+                className="mx-2 py-1 text-sm leading-6 text-black border-b-2 border-transparent hover:border-black hover:text-black"
               >
                 {item.name}
               </Link>
