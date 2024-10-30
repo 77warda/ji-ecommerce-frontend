@@ -5,17 +5,21 @@ import {
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
-import { BsHeart } from "react-icons/bs";
+import { FaRegHeart } from "react-icons/fa6";
 import { BiUser } from "react-icons/bi";
 import Logo from "../logo.svg";
 import { Link } from "react-router-dom";
+import { IoSearchOutline } from "react-icons/io5";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About us ", href: "/" },
-  { name: "Shop", href: "/shop" },
-  { name: "Deals", href: "/deals" },
-  { name: "contact us", href: "/" },
+  { name: "Juttis", href: "/" },
+  { name: "Sandals", href: "/" },
+  { name: "Kolhapuris", href: "/shop" },
+  { name: "PNP X Anushree Reddy", href: "/deals" },
+  { name: "Wedding Shops", href: "/" },
+  { name: "KURTA SETS", href: "/" },
+  { name: "FESTIVE BAGS", href: "/" },
+  { name: "Celebrity", href: "/" },
 ];
 
 function Header() {
@@ -28,12 +32,15 @@ function Header() {
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Sports Hub</span>
-              <img className="h-8" src={Logo} alt="logo" />
+              <span className="sr-only">J & I</span>
+              {/* <img className="h-8" src={Logo} alt="logo" /> */}
             </Link>
-            <p className="px-3 font-bold uppercase text-xl text-[#432818]">
-              Sports Hub
-            </p>
+            <Link
+              to="/"
+              className="px-3 font-semibold uppercase text-5xl text-black"
+            >
+              J & I
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -50,30 +57,33 @@ function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="px-4 py-1 text-sm font-semibold leading-6 text-[#432818] hover:bg-[#a48971] hover:text-white "
+                className="mx-2 py-1 text-lg leading-6 text-black border-b-2 border-transparent hover:border-black hover:text-black"
               >
                 {item.name}
               </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <button className="mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 text-1xl">
-              <BsHeart className="fill-[#ede0d4]" />
+            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
+              <IoSearchOutline className="text-xl" />
+            </button>
+            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-1xl">
+              <FaRegHeart className="fill-black" />
             </button>
             <Link
               to="/cart"
               className="text-sm font-semibold leading-6 text-gray-900 relative"
             >
-              <button className="relative mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 ">
+              <button className="relative mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 ">
                 <ShoppingCartIcon className="h-5 w-5 inline-block" />
                 {cartItems.length > 0 && (
-                  <span className="absolute -top-1 -right-2 bg-[#432818] text-[#ede0d4] rounded-full px-1 text-xs">
+                  <span className="absolute -top-1 -right-2 text-black rounded-full px-1 text-xs">
                     {cartItems.length}
                   </span>
                 )}
               </button>
             </Link>
-            <button className="mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 text-[1.1rem]">
+            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
               <BiUser className="stroke-1.5" />
             </button>
           </div>
@@ -85,7 +95,7 @@ function Header() {
           >
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Sports Hub</span>
+                <span className="sr-only">J & I</span>
                 <img
                   className="h-8"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -108,9 +118,11 @@ function Header() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      className=" -mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900"
                     >
-                      {item.name}
+                      <span className="text-black border-b-2 border-transparent hover:border-black">
+                        {item.name}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -123,23 +135,26 @@ function Header() {
                   </Link>
                 </div> */}
                 <div className="py-6 flex justify-start">
-                  <button className="mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 text-1xl">
-                    <BsHeart className="fill-[#ede0d4]" />
+                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
+                    <IoSearchOutline className="text-xl" />
+                  </button>
+                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-1xl">
+                    <FaRegHeart className="fill-black" />
                   </button>
                   <Link
                     to="/cart"
                     className="text-sm font-semibold leading-6 text-gray-900 relative"
                   >
-                    <button className="relative mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 ">
+                    <button className="relative mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 ">
                       <ShoppingCartIcon className="h-5 w-5 inline-block" />
                       {cartItems.length > 0 && (
-                        <span className="absolute -top-1 -right-2 bg-[#432818] text-[#ede0d4] rounded-full px-1 text-xs">
+                        <span className="absolute -top-1 -right-2 bg-[#432818] text-black rounded-full px-1 text-xs">
                           {cartItems.length}
                         </span>
                       )}
                     </button>
                   </Link>
-                  <button className="mx-1.5 rounded-full bg-[#a48971] h-7 w-7 flex justify-center items-center text-[#ede0d4] hover:bg-opacity-95 border-0 text-[1.1rem]">
+                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
                     <BiUser className="stroke-1.5" />
                   </button>
                 </div>
