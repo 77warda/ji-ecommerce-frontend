@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&family=Roboto&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* font-optical-sizing: auto; */
-  /* font-weight: <weight>; */
   font-style: normal;
 }

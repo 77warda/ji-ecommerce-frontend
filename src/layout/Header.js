@@ -27,7 +27,7 @@ function Header() {
   const [cartItems, setCartItems] = useState([]);
 
   return (
-    <div className="px-5 py-5">
+    <div className="fixed top-0 w-full z-20 bg-white shadow-md px-5 py-5">
       <div className="px-6 lg:px-8">
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -37,7 +37,7 @@ function Header() {
             </Link>
             <Link
               to="/"
-              className="px-3 font-semibold uppercase text-3xl text-black"
+              className="w-28 px-3 font-semibold uppercase text-3xl text-black"
             >
               J & I
             </Link>
@@ -52,7 +52,7 @@ function Header() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-3">
+          <div className="max-w-5xl justify-center flex-wrap hidden lg:flex lg:gap-x-3">
             {navigation.map((item) => (
               <Link
                 key={item.name}
