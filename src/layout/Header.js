@@ -7,7 +7,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaRegHeart } from "react-icons/fa6";
 import { BiUser } from "react-icons/bi";
-import Logo from "../logo.svg";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 
