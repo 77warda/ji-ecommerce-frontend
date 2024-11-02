@@ -62,13 +62,13 @@ function Footer() {
     setInputValue(event.target.value);
   };
   return (
-    <footer className="border-t-2 border-b-2 border-gray-300 lg:text-left">
-      <div className="py-5 px-10">
+    <footer className="border-t border-gray-300 lg:text-left">
+      <div className="py-5 px-1 lg:px-10 md:px-10">
         <div className="mx-6 pb-5 pt-3">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {Object.entries(navigation).map(([section, links]) => (
               <div key={section}>
-                <h5 className="uppercase tracking-widest mb-4 font-semibold text-dark">
+                <h5 className="text-sm uppercase tracking-widest mb-4 font-semibold text-dark">
                   {section}
                 </h5>
                 <ul className="space-y-2">
@@ -77,7 +77,7 @@ function Footer() {
                       {link.icon ? (
                         <a
                           href={link.href}
-                          className="text-dark flex items-center space-x-2"
+                          className="text-dark text-sm flex items-center space-x-2"
                         >
                           <link.icon className="h-5 w-5" />
                           <span>{link.name}</span>
@@ -85,7 +85,7 @@ function Footer() {
                       ) : (
                         <a
                           href={link.href}
-                          className="tracking-wider font-normal text-dark"
+                          className="text-sm tracking-wider font-normal text-dark"
                         >
                           {link.name}
                         </a>
@@ -94,7 +94,7 @@ function Footer() {
                   ))}
                   {section === "Join the Pastels and Pop Tribe" && (
                     <div className="">
-                      <p className="tracking-wider font-normal text-dark">
+                      <p className="text-sm tracking-wider font-normal text-dark">
                         Get first dibs on new styles, promotions, events and
                         other magical updates right in your inbox.
                       </p>
@@ -105,7 +105,7 @@ function Footer() {
                           id="email"
                           value={inputValue}
                           onChange={handleInputChange}
-                          className="bg-transparent block w-full border-b-2 border-black py-1 px-3 text-dark focus:border-dark focus:outline-none placeholder:text-black sm:text-sm sm:leading-6 placeholder:font-normal placeholder:tracking-wider placeholder:text-base"
+                          className="text-sm bg-transparent block w-full border-b-2 border-black py-1 px-3 text-dark focus:border-dark focus:outline-none placeholder:text-black sm:text-sm sm:leading-6 placeholder:font-normal placeholder:tracking-wider placeholder:text-sm"
                           placeholder="Enter your Email"
                         />
 
