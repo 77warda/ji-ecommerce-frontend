@@ -17,7 +17,7 @@ function Shop() {
         </h1>
         <div className="my-10 grid grid-cols-12">
           <div className="col-span-12 lg:col-span-6">
-            {/* <GalleryImages /> */}
+            <GalleryImages />
           </div>
           <div className="col-span-12 lg:col-span-6">
             <div class="mx-auto p-6 space-y-4">
