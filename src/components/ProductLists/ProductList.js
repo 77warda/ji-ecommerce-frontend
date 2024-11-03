@@ -1,5 +1,5 @@
 import React from "react";
-import Cola from "../assets/Cola.webp"
+import Cola from "../../assets/Cola.webp"
 function ProductList() {
     const products = [
       {
@@ -54,20 +54,24 @@ function ProductList() {
   function ProductCard({ image, title, msrp, salePrice }) {
     return (
       <div className="text-center">
-        <div className="relative overflow-hidden">
-          <div className="absolute top-0 right-0 ">
-            <span className="bg-black text-white text-sm px-2 py-1 ">Sale!</span>
-          </div>
-          <img src={image} className="w-full h-48 object-cover" alt={title} />
-          <div className="p-4">
-            <h5>{title}</h5>
-            <p className="text-sm flex justify-center items-center">
-              <span className="line-through text-gray-500 mr-2">Rs {msrp}</span>
-              <span>Rs {salePrice}</span>
-            </p>
-          </div>
-        </div>
-      </div>
+  <div className="relative overflow-hidden group">
+    <div className="absolute top-0 right-0">
+      <span className="bg-black text-white text-sm px-2 py-1">Sale!</span>
+    </div>
+    <img src={image} className="w-full h-48 object-cover" alt={title} />
+    <div className="p-4">
+      <h5>{title}</h5>
+      <p className="text-sm flex justify-center items-center">
+        <span className="line-through text-gray-500 mr-2">Rs {msrp}</span>
+        <span>Rs {salePrice}</span>
+      </p>
+      <button className="flex-1 bg-black text-sm text-white w-11/12 py-1.5 absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-black">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</div>
+
     );
   }
   
