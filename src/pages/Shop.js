@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { FaTruck } from "react-icons/fa";
+import { FaAngleDown, FaTruck, FaAngleUp } from "react-icons/fa";
 import GalleryImages from "../components/GalleryImages";
+import { Link } from "react-router-dom";
+import { LiaBullhornSolid } from "react-icons/lia";
+import { TfiAngleDown, TfiAngleUp } from "react-icons/tfi";
 
 function Shop() {
+  const [open, setOpen] = useState(false);
+  const toggleAccordion = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
       <Header />
@@ -103,6 +111,45 @@ function Shop() {
               <div class="flex items-center space-x-4 border border-gray-300 bg-gray-100 p-4 text-gray-700">
                 <FaTruck className="text-black" size={20} />
                 <span>Estimated Shipping Time (5-7 working days)</span>
+              </div>
+              <div className="border border-gray-400 group">
+                <div className="py-2">
+                  <button
+                    className="w-full flex justify-between items-center text-left focus:outline-none"
+                    onClick={toggleAccordion}
+                  >
+                    <span className="uppercase p-1.5 ml-3 text-xs font-light text-gray-700">
+                      CARE and PACKAGING
+                    </span>
+                    <span className="pr-5 mt-0.5 ml-2 text-gray-800 text-lg group-hover:text-gray-800">
+                      {open ? <TfiAngleUp /> : <TfiAngleDown />}
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className={`transition-all duration-700 ease-in-out overflow-hidden ${
+                    open ? "max-h-screen" : "max-h-0"
+                  }`}
+                >
+                  <div className="py-2 mx-4 group-hover:bg-transparent">
+                    <div className="py-1 px-4">
+                      <Link
+                        to="/campaigns/add"
+                        className="text-sm font-medium text-gray-600 px-3"
+                      >
+                        Add Campaigns
+                      </Link>
+                    </div>
+                    <div className="py-1 px-4">
+                      <Link
+                        to="/campaigns"
+                        className="text-sm font-medium text-gray-600 px-3"
+                      >
+                        Campaigns
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
