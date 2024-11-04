@@ -5,6 +5,8 @@ import Footer from "../layout/Footer";
 import img from "../assets/La_Dolce.webp";
 import fun from "../assets/Fun&Festire.webp"
 import weddingShops from "../assets/WeddingBox.webp"
+import JuttisForMen from "../assets/designer_mens.webp"
+import GiftCards from "../assets/GiftCards.webp"
 import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
@@ -88,6 +90,119 @@ const LandingPage = () => {
             />
 </Link>
 </div>
+
+
+{/* Gift Cards */}
+<div className="container mx-auto mt-16">
+<div className="grid grid-cols-12 gap-2">
+<div className="col-span-4">
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover"
+            />
+</Link>
+</div>
+<div className="col-span-4">
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover"
+            />
+</Link>
+
+</div>
+<div className="col-span-4">
+
+<div className="container mx-auto space-y-1">
+<div className="row-span-6">
+<Link to="/shop">
+<img
+              src={GiftCards}
+              alt="Description"
+              className="w-full h-auto object-cover"
+            />
+</Link>
+</div>
+<div className="row-span-6 ">
+<Link to="/shop">
+<img
+              src={GiftCards}
+              alt="Description"
+              className="w-full h-auto object-cover"
+            />
+</Link>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+{/* CELEBRITY CLOSET */}
+<h3 className="text-xl font-normal text-center my-14 ">CELEBRITY CLOSET</h3>
+
+<div className="container mx-auto my-10">
+<div className="grid grid-cols-12 gap-2">
+<div className="col-span-4">
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+</Link>
+
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg my-2"
+            />
+</Link>
+</div>
+
+<div className="col-span-4">
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+</Link>
+
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg my-2"
+            />
+</Link>
+</div>
+<div className="col-span-4">
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+</Link>
+
+<Link to="/shop">
+<img
+              src={JuttisForMen}
+              alt="Description"
+              className="w-full h-auto object-cover rounded-lg my-2"
+            />
+</Link>
+</div>
+</div>
+</div>
+
       <Footer />
     </>
   );
