@@ -3,22 +3,24 @@ import ProductList from "../components/ProductLists/ProductList";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import img from "../assets/La_Dolce.webp";
-import fun from "../assets/Fun&Festire.webp"
-import weddingShops from "../assets/WeddingBox.webp"
-import JuttisForMen from "../assets/designer_mens.webp"
-import GiftCards from "../assets/GiftCards.webp"
+import fun from "../assets/Fun&Festire.webp";
+import weddingShops from "../assets/WeddingBox.webp";
+import JuttisForMen from "../assets/designer_mens.webp";
+import GiftCards from "../assets/GiftCards.webp";
 import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <>
-      <Header />
       <div className="my-28">
-  <div className="text-center">
-  <h3 className="text-2xl font-normal my-2">NEW ARRIVALS</h3>
-  <Link to="/shop" class=" bg-transparent text-black p-1 border-2 text-xs">
-                  VIEW ALL
-                </Link>
-  </div>
+        <div className="text-center">
+          <h3 className="text-2xl font-normal my-2">NEW ARRIVALS</h3>
+          <Link
+            to="/shop"
+            class=" bg-transparent text-black p-1 border-2 text-xs"
+          >
+            VIEW ALL
+          </Link>
+        </div>
         <ProductList />
       </div>
       {/* La Dolce Vita */}
@@ -52,158 +54,153 @@ const LandingPage = () => {
                 hope that it takes you on journeys unforgettable! ❤️
               </p>
               <button class=" bg-black text-white py-2 px-6 transition duration-300 hover:bg-gray-900">
-                  Show More
-                </button>
+                Show More
+              </button>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="my-20">
+        <h3 className="text-2xl font-normal my-8 text-center">
+          FESTIVE FAVOURITES
+        </h3>
+        <ProductList />
+      </div>
 
-<div className="my-20">
-<h3 className="text-2xl font-normal my-8 text-center">FESTIVE FAVOURITES</h3>
-<ProductList/>
+      {/* Fun & Festire  */}
+      <Link to="/shop">
+        <img
+          src={fun}
+          alt="Description"
+          className="col-span-6 w-full h-auto object-cover my-20"
+        />
+      </Link>
 
-</div>
+      {/* Wedding Shops */}
+      <div className="my-20 text-center">
+        <h3 className="text-xl font-normal my-4">THE WEDDING SHOP</h3>
+        <p className="text-sm italic">
+          Beautiful jutti's in gorgeous packaging for your special day
+        </p>
+      </div>
+      <div>
+        <Link to="/shop">
+          <img
+            src={weddingShops}
+            alt="Description"
+            className="col-span-6 w-full h-auto object-cover"
+          />
+        </Link>
+      </div>
 
+      {/* Gift Cards */}
+      <div className="container mx-auto mt-16">
+        <div className="grid grid-cols-12 gap-2">
+          <div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover"
+              />
+            </Link>
+          </div>
+          <div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover"
+              />
+            </Link>
+          </div>
+          <div className="col-span-4">
+            <div className="container mx-auto space-y-1">
+              <div className="row-span-6">
+                <Link to="/shop">
+                  <img
+                    src={GiftCards}
+                    alt="Description"
+                    className="w-full h-auto object-cover"
+                  />
+                </Link>
+              </div>
+              <div className="row-span-6 ">
+                <Link to="/shop">
+                  <img
+                    src={GiftCards}
+                    alt="Description"
+                    className="w-full h-auto object-cover"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-{/* Fun & Festire  */}
-<Link to="/shop">
-<img
-              src={fun}
-              alt="Description"
-              className="col-span-6 w-full h-auto object-cover my-20"
-            />
-</Link>
+      {/* CELEBRITY CLOSET */}
+      <h3 className="text-xl font-normal text-center my-14 ">
+        CELEBRITY CLOSET
+      </h3>
 
-{/* Wedding Shops */}
-<div className="my-20 text-center">
-  <h3 className="text-xl font-normal my-4">THE WEDDING SHOP</h3>
-  <p className="text-sm italic">Beautiful jutti's in gorgeous packaging for your special day</p>
-</div>
-<div>
-<Link to="/shop">
-<img
-              src={weddingShops}
-              alt="Description"
-              className="col-span-6 w-full h-auto object-cover"
-            />
-</Link>
-</div>
+      <div className="container mx-auto my-10">
+        <div className="grid grid-cols-12 gap-2">
+          <div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </Link>
 
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg my-2"
+              />
+            </Link>
+          </div>
 
-{/* Gift Cards */}
-<div className="container mx-auto mt-16">
-<div className="grid grid-cols-12 gap-2">
-<div className="col-span-4">
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover"
-            />
-</Link>
-</div>
-<div className="col-span-4">
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover"
-            />
-</Link>
+          <div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </Link>
 
-</div>
-<div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg my-2"
+              />
+            </Link>
+          </div>
+          <div className="col-span-4">
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </Link>
 
-<div className="container mx-auto space-y-1">
-<div className="row-span-6">
-<Link to="/shop">
-<img
-              src={GiftCards}
-              alt="Description"
-              className="w-full h-auto object-cover"
-            />
-</Link>
-</div>
-<div className="row-span-6 ">
-<Link to="/shop">
-<img
-              src={GiftCards}
-              alt="Description"
-              className="w-full h-auto object-cover"
-            />
-</Link>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-
-
-{/* CELEBRITY CLOSET */}
-<h3 className="text-xl font-normal text-center my-14 ">CELEBRITY CLOSET</h3>
-
-<div className="container mx-auto my-10">
-<div className="grid grid-cols-12 gap-2">
-<div className="col-span-4">
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg"
-            />
-</Link>
-
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg my-2"
-            />
-</Link>
-</div>
-
-<div className="col-span-4">
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg"
-            />
-</Link>
-
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg my-2"
-            />
-</Link>
-</div>
-<div className="col-span-4">
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg"
-            />
-</Link>
-
-<Link to="/shop">
-<img
-              src={JuttisForMen}
-              alt="Description"
-              className="w-full h-auto object-cover rounded-lg my-2"
-            />
-</Link>
-</div>
-</div>
-</div>
-
-      <Footer />
+            <Link to="/shop">
+              <img
+                src={JuttisForMen}
+                alt="Description"
+                className="w-full h-auto object-cover rounded-lg my-2"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
