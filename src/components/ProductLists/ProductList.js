@@ -1,5 +1,6 @@
 import React from "react";
 import Cola from "../../assets/Cola.webp"
+import { Link } from "react-router-dom";
 function ProductList() {
     const products = [
       {
@@ -65,9 +66,10 @@ function ProductList() {
         <span className="line-through text-gray-500 mr-2">Rs {msrp}</span>
         <span>Rs {salePrice}</span>
       </p>
-      <button className="flex-1 bg-black text-sm text-white w-11/12 py-1.5 absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-black">
+      
+      <Link to="/shop" className="flex-1 bg-black text-sm text-white w-11/12 py-1.5 absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-black">
         Shop Now
-      </button>
+      </Link>
     </div>
   </div>
 </div>

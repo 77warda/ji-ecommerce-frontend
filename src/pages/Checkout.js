@@ -85,8 +85,84 @@ function Checkout() {
           <div className="w-full p-2 border border-gray-300 rounded-lg text-gray-500">
             Enter your shipping address to view available shipping methods.
           </div>
-        </div>
 
+          
+          {/* Payment */}
+<div className="mt-6">
+  <h2 className="text-lg font-semibold">Payment</h2>
+  <p className="py-2 text-gray-500">
+    All transactions are secure and encrypted.
+  </p>
+</div>
+
+<div className="w-full border border-gray-300 rounded-t">
+  <div>
+    {/* Payment Methods Row */}
+    <div className="w-full p-3 border border-black rounded-t text-sm flex flex-col md:flex-row md:justify-between gap-3">
+      <span>Cards, UPI, NB, Wallets, BNPL by PayU Pakistan</span>
+      <div className="flex flex-wrap gap-2">
+        <img
+          src="https://img.icons8.com/color/48/visa.png"
+          alt="Visa"
+          className="h-6 w-6"
+        />
+        <img
+          src="https://img.icons8.com/color/48/mastercard.png"
+          alt="Mastercard"
+          className="h-6 w-6"
+        />
+        <img
+          src="https://img.icons8.com/color/48/rupay.png"
+          alt="RuPay"
+          className="h-6 w-6"
+        />
+        <img
+          src="https://img.icons8.com/color/48/paytm.png"
+          alt="Paytm"
+          className="h-6 w-6"
+        />
+        <span className="flex items-center justify-center bg-gray-200 text-gray-600 text-xs font-semibold rounded-full h-6 w-6">
+          +9
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div className="flex flex-col items-center bg-gray-50 p-4 md:p-6">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-252.3 356.1 163 80.9"
+      className="h-24 w-24 md:h-40 md:w-40 text-gray-500"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-miterlimit="10"
+        stroke-width="2"
+        d="M-108.9 404.1v30c0 1.1-.9 2-2 2H-231c-1.1 0-2-.9-2-2v-75c0-1.1.9-2 2-2h120.1c1.1 0 2 .9 2 2v37m-124.1-29h124.1"
+      ></path>
+      <circle cx="-227.8" cy="361.9" r="1.8" fill="currentColor"></circle>
+      <circle cx="-222.2" cy="361.9" r="1.8" fill="currentColor"></circle>
+      <circle cx="-216.6" cy="361.9" r="1.8" fill="currentColor"></circle>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-miterlimit="10"
+        stroke-width="2"
+        d="M-128.7 400.1H-92m-3.6-4.1 4 4.1-4 4.1"
+      ></path>
+    </svg>
+
+    <p className="text-sm text-gray-600 px-4 md:px-36 text-center pb-4">
+      After clicking “Pay now”, you will be redirected to Cards, UPI, NB, Wallets, BNPL by PayU India to complete your purchase securely.
+    </p>
+  </div>
+</div>
+
+
+
+
+        </div>
         {/* Order Summary Section */}
         <div className="w-2/5 p-8 bg-white shadow-lg rounded-lg">
           {/* Order Items */}
